@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <title>Sameera's Portfolio</title>
     <link rel="stylesheet" href="default.css">
 </head>
 
-<body>
-    <header> 
+<body onload="openDefaultProject()">
+    <header>
         <div id="logo">
             <h4><a href="index.html">Sameera</a></h4>
         </div>
@@ -26,23 +26,37 @@
         </div>
     </div>
 
+    <section class = "s2">
+        <h2 class = "title">Amma's House</h2>
+        <p>
+
+        </p>
+    </section>
+
+    <section class = "s3">
+        <h2 class = "title">Anna</h2>
+        <p>
+
+        </p>
+    </section>
+
     <!-- Tabbed Projects Section -->
     <div class="s2">
-        <h2>My Projects</h2>
+        <h3></h3>
         <div class="tabs">
-            <button class="tablinks" onclick="openProject(event, 'Project1')">Project 1</button>
-            <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
+            <button class="tablinks" onclick="openProject(event, 'Project1')">Amma's House</button>
+            <button class="tablinks" onclick="openProject(event, 'Project2')">Anna</button>
             <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
             <button class="tablinks" onclick="openProject(event, 'Project4')">Project 4</button>
         </div>
 
         <div id="Project1" class="tab-content">
-            <h3>Project 1</h3>
+            <h3>Amma's House</h3>
             <p>Details of Project 1...</p>
         </div>
 
         <div id="Project2" class="tab-content">
-            <h3>Project 2</h3>
+            <h3>Anna</h3>
             <p>Details of Project 2...</p>
         </div>
 
@@ -73,6 +87,10 @@
 
             document.getElementById(projectName).style.display = "block";
             evt.currentTarget.className += " active";
+        }
+
+        function openDefaultProject() {
+            document.querySelector(".tablinks").click();
         }
     </script>
 

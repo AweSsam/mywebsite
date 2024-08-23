@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <title>Sameera's Portfolio</title>
     <link rel="stylesheet" href="default.css">
 </head>
 
-<body>
-    <header> 
+<body onload="openDefaultProject()">
+    <header>
         <div id="logo">
             <h4><a href="index.html">Sameera</a></h4>
         </div>
@@ -28,32 +28,73 @@
 
     <!-- Tabbed Projects Section -->
     <div class="s2">
-        <h2>My Projects</h2>
+        <h3>Currently, I am proficient in Python, Java, HTML, CSS, C, TypeScript, Angular, Assembly, Docker, SQL, FastAPI, Git usage, and JavaScript. </h3>
+        <h3>Check out some of my projects below!</h3>
         <div class="tabs">
-            <button class="tablinks" onclick="openProject(event, 'Project1')">Project 1</button>
-            <button class="tablinks" onclick="openProject(event, 'Project2')">Project 2</button>
-            <button class="tablinks" onclick="openProject(event, 'Project3')">Project 3</button>
-            <button class="tablinks" onclick="openProject(event, 'Project4')">Project 4</button>
+            <button class="tablinks" onclick="openProject(event, 'Project1')">Room and Seat Admin View</button>
+            <button class="tablinks" onclick="openProject(event, 'Project2')">Akari</button>
+            <button class="tablinks" onclick="openProject(event, 'Project3')">Careful Watchers 1.0</button>
+            <button class="tablinks" onclick="openProject(event, 'Project4')">This Portfolio!</button>
+            <button class="tablinks" onclick="openProject(event, 'Project5')">Hack 110 Project Survival Island</button>
+            <button class="tablinks" onclick="openProject(event, 'Project6')">Haunted House Simulation</button>
         </div>
 
         <div id="Project1" class="tab-content">
-            <h3>Project 1</h3>
-            <p>Details of Project 1...</p>
+            <h3>Room and Seat Admin View</h3>
+            <p>Project dedicated to enhance the room and seat management system for the Department of Computer
+                 Science at UNC's Computer Science Experience Lab (CSXL). We created a feature that displays 
+                 rooms and seats in tabular format for admin of the CSXL, while incorporating functionalities 
+                 for adding and deleting these seats and rooms as well. In the future, we aim to have a grid 
+                 drag and drop UI. </p>
+            <p>Using FastAPI, PostgreSQL, and SQLAlchemy, we've established a robust backend layer backed by 
+                rigorous unit tests. This layer ensures persistent storage of room and seat data and facilitates
+                 efficient querying of data. We implemented a seamless integration between the frontend and 
+                 backend by facilitating the exchange of JSON HTTP request bodies. This ensures real-time data 
+                 updates and synchronization.</p>
+            <p>
+                We use agile methodology to organize our collaborative efforts, including sprint planning, 
+                stand-ups, and user stories, fostering an iterative and adaptive development process. Extensive 
+                use of the git version control system helps us organize the project codebase efficiently, 
+                ensuring streamlined collaboration and code management.
+            </p>
+            <h4>Made with Git, Angular, TypeScript, FastAPI, SQL, Docker, Agile Methodologies, Kubernetes, 
+                RxJS, AngularJS, Python, HTML, CSS</h4>
+                
         </div>
 
         <div id="Project2" class="tab-content">
-            <h3>Project 2</h3>
-            <p>Details of Project 2...</p>
+            <h3>Akari</h3>
+            <p>Designed a complete and detailed logic puzzle game using the the Model View Controller design. 
+                Created a user-friendly UI using JavaFX and CSS for said logic puzzle game, improving user 
+                experience with iterative redesign incorporating feedback.</p>
+            <h4>Made with JavaFX, Model-View-Controller (MVC), Java, CSS</h4>
         </div>
 
         <div id="Project3" class="tab-content">
-            <h3>Project 3</h3>
-            <p>Details of Project 3...</p>
+            <h3>Careful Watchers 1.0</h3>
+            <p>I am developing a game about a group of kids starting a detective agency! Play the demo version of the game here! </p>
+                <p>Meet the four main characters, AJ, Kurt, Christie, and Moe, and go along with them on their adventures in their small town, Esteredge. 
+                Talk with different people, learn different clues, and piece together the answer (through assumption or evidence) for your case.</p>
+                <h4>Made with Python and Ren'Py. </h4>
         </div>
 
         <div id="Project4" class="tab-content">
-            <h3>Project 4</h3>
-            <p>Details of Project 4...</p>
+            <h3>This Portfolio!</h3>
+            <p>Currently, I'm creating a Portfolio website which I am coding from scratch using HTML, CSS, & JavaScript.</p>
+        </div>
+
+        <div id="Project5" class="tab-content">
+            <h3>Hack 110 Project Survival Island</h3>
+            <p>Led and directed our team through story writing, code, design, and execution to develop an 
+                escape island simulator where the player is given a set of items at the beginning of the game, 
+                and are meant to use the items, luck, and logic to escape the seemingly deserted island (Python,
+                 HTML, CSS, Flask).</p>
+        </div>
+
+        <div id="Project6" class="tab-content">
+            <h3>Haunted House Simulation</h3>
+            <p>Created a haunted house simulation testing if players could survive a horror movie (designed, 
+                wrote, and coded with Python).</p>
         </div>
     </div>
 
@@ -73,6 +114,10 @@
 
             document.getElementById(projectName).style.display = "block";
             evt.currentTarget.className += " active";
+        }
+
+        function openDefaultProject() {
+            document.querySelector(".tablinks").click();
         }
     </script>
 
