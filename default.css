@@ -30,12 +30,15 @@ li, a, table, p { /* Secondary letterings are all off-white */
     padding: 8px;
 }
 
-header { /* The navigation bar */
+/* Base styling for the navigation bar */
+header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 5px 10%;
+    padding: 5px 2%;
     background-color: #494949;
+    margin: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow effect */
 }
 
 body {
@@ -105,10 +108,9 @@ figcaption {
 }
 
 .s1 h1 {
-    text-transform: uppercase;
-    font-size: 100px;
+    font-size: 40px;
     font-weight: 100;
-    letter-spacing: 30px;
+    letter-spacing: 5px;
 }
 
 .s2 { /* dark gray background sections */
@@ -128,6 +130,15 @@ figcaption {
     letter-spacing: 20px;
 }
 
+.s2 .titlemiddle {
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 10;
+    letter-spacing: 20px;
+    text-align: center;
+    align-content: center;
+}
+
 .s3 { /* gray background sections */
     display: grid;
     text-align: left;
@@ -137,6 +148,8 @@ figcaption {
     align-content: center;
     padding-top: 30px;
     background-color: #494949;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5), /* Shadow on top */
+                0px 4px 10px rgba(0, 0, 0, 0.5);  /* Shadow on bottom */
 }
 
 .s3 .title {
@@ -144,6 +157,15 @@ figcaption {
     text-transform: uppercase;
     font-weight: 10;
     letter-spacing: 20px;
+}
+
+.s3 .titlemiddle {
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: 10;
+    letter-spacing: 20px;
+    text-align: center;
+    align-content: center;
 }
 
 .diffcolor{ /* gray  quote sections */
@@ -173,6 +195,7 @@ figcaption {
 }
 
 .nav_links li {
+    position: relative; /* Necessary for dropdown */
     display: inline-block;
     padding: 0px 20px;
 }
@@ -183,11 +206,53 @@ figcaption {
     font-weight: 500;
     font-size: 16px;
     color: #ffffff;
+    transition: all 0.3s ease 0s;
 }
 
 .nav_links li a:hover {
     color: #0088a9
 }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Adjust to move dropdown further down */
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #494949;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 120px;
+}
+
+/* Dropdown link styles */
+.dropdown-content li {
+    padding: 0;
+    width: 100%;
+}
+
+.dropdown-content li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+/* Ensure the entire section is blue on hover */
+.dropdown-content li a:hover {
+    background-color: #0088a9;
+    color: #ffffff;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .image-size {
     width: 100%;
@@ -250,4 +315,53 @@ figcaption {
     border-top: none; /* Removes the top border to connect with the active tab */
     margin-top: 0; /* Ensure the content aligns perfectly with the tab */
     padding-left: 0;
+}
+
+.pdf-container {
+    margin: 0;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+iframe, embed {
+    border: none;
+}
+
+/* Styling the scroll button */
+.scroll-button {
+    text-align: center;
+    margin-top: -60px; /* Adjust if needed */
+    margin-bottom: 40px;
+}
+
+.scroll-button .circle {
+    background-color: #0088a9;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow effect */
+}
+
+.scroll-button .arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #ffffff;
+}
+
+/* Smooth scrolling for the button click */
+html {
+    scroll-behavior: smooth;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers the video horizontally */
+    margin-top: 25px;
 }
