@@ -267,7 +267,7 @@ header nav {
 .tabs button.active {
     background-color: #0088a9; /* Accent color */
     color: #ffffff;
-    border-bottom: 1px solid #2f2f2f; /* Removes the border to connect with the content */
+    border-bottom: 1px solid #0088a9; /* Removes the border to connect with the content */
     margin-left: -1px;
 }
 
@@ -386,3 +386,63 @@ html {
     transform: rotate(90deg);
   }
   
+
+
+/* Container for the tabs */
+.tabs2 {
+    overflow: hidden;
+    background-color: #2f2f2f; /* Matches your background */
+    margin-top: 20px;
+    border-bottom: 1px solid #494949;
+}
+
+/* Tab buttons */
+.tabs2 button {
+    background-color: inherit;
+    border: 2px solid #0088a9;
+    border-bottom: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: #ffffff;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+/* Change tab button background on hover */
+.tabs2 button:hover {
+    background-color: #494949;
+}
+
+/* Active tab button */
+.tabs2 button.active {
+    background-color: #0088a9; /* Accent color */
+    color: #ffffff;
+    border-bottom: 1px solid #0088a9; /* Removes the border to connect with the content */
+    margin-left: -1px;
+}
+
+/* Tab content */
+.tab-content2 {
+    display: none;
+    border-top: none;
+    background-color: #0088a9; /* Matches your background */
+    color: #dbd1d1;
+    border-radius: 0 0 10px 10px; /* Rounded bottom corners of content box */
+    margin-top: -5px; /* Removes the gap between the tab and content */
+    padding-left: 0;
+    padding: 20px 20px 20px 20px;
+}
+
+/* Show active tab content */
+.tab-content2.active {
+    display: block;
+    border-top: none; /* Removes the top border to connect with the active tab */
+    margin-top: 0; /* Ensure the content aligns perfectly with the tab */
+    padding-left: 0;
+}

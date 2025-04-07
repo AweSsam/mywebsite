@@ -35,8 +35,10 @@
             <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
         </h2>
         <div class="section-content collapsed">
+
         <h3>Overload</h3>
-        <div class="video-container">
+        <hr>
+        <div class="video-container" style="margin-bottom: 30px;">
             <iframe width="800" height="450" 
                     src="https://www.youtube.com/embed/R29IWmlYHMQ?si=iJsB7aK5AeXK6hI1" 
                     title="YouTube video player" 
@@ -46,9 +48,10 @@
                     allowfullscreen>
             </iframe>
         </div>
-        
+
         <h3>Creature Animatic</h3>
-        <div class="video-container">
+        <hr>
+        <div class="video-container" style="margin-bottom: 30px;">
             <iframe width="800" height="450" 
                     src="https://www.youtube.com/embed/meNvojOTgS0?si=rrGmqTrVj3O05sB-" 
                     title="YouTube video player" 
@@ -58,15 +61,16 @@
                     allowfullscreen>
             </iframe>
         </div>
-        
+
         <h3>Careful Watchers 1.0</h3>
+        <hr>
         <div class="tabs">
             <button class="tablinks" onclick="openProject(event, 'Project4')">In-Game Art</button>
             <button class="tablinks" onclick="openProject(event, 'Project5')">Unused Art Pieces</button>
             <button class="tablinks" onclick="openProject(event, 'Project6')">Concept Sketches</button>
         </div>
 
-        <div id="Project4" class="tab-content">
+        <div id="Project4" class="tab-content" style="margin-bottom: 30px;">
             <p>Some background shots from the game, and some character models. See the code behind the game here.</p>
             <div class="row"> 
                 <div class="column">
@@ -229,39 +233,80 @@
             </div>
           </div>
             <!-- Add more art items as needed -->
-        </div>
+        </div> 
     </div>
     </section>
     
 
-    <section class = "s2">
-        <h2 class = "title">Traditional Art
-            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+    <section class="s2">
+        <h2 class="title">Traditional Art
+          <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
         </h2>
         <div class="section-content collapsed">
-
-        <!-- <div class="tabs"></div>
-            <button class="tablinks" onclick="openProject(event, 'Project1')">Sketches</button>
-            <button class="tablinks" onclick="openProject(event, 'Project2')">Paintings</button>
-            <button class="tablinks" onclick="openProject(event, 'Project3')">Ink</button>
+          <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'Trad1', this)">Sketches</button>
+            <button class="tablinks" onclick="openTab(event, 'Trad2', this)">Paintings</button>
+            <!-- <button class="tablinks" onclick="openTab(event, 'Trad3', this)">Ink</button> -->
+          </div>
+      
+          <div id="Trad1" class="tab-content">
+            <p>Some traditional sketches.</p>
+            <div class="row">
+                <div class="column">
+                <img src="images/trad/sketches/IMG_8776.png">
+                <img src="images/trad/sketches/IMG_8766.png">
+                <img src="images/trad/sketches/IMG_8770.png">
+                <img src="images/trad/sketches/IMG_8774.png">
+                <img src="images/trad/sketches/IMG_8778.png">
+                </div>
+                <div class="column">
+                <img src="images/trad/sketches/IMG_8768.png">
+                <img src="images/trad/sketches/IMG_8767.png">
+                <img src="images/trad/sketches/IMG_8771.png">
+                <img src="images/trad/sketches/IMG_8775.png">
+                <img src="images/trad/sketches/IMG_8779.png">
+                </div>
+                <div class="column">
+                <img src="images/trad/sketches/IMG_8764.png">
+                <img src="images/trad/sketches/IMG_8763.png">
+                <img src="images/trad/sketches/IMG_8772.png">
+                <img src="images/trad/sketches/IMG_8762.png">
+                </div>
+                <div class="column">
+                <img src="images/trad/sketches/IMG_8765.png">
+                <img src="images/trad/sketches/IMG_8769.png">
+                <img src="images/trad/sketches/IMG_8773.png">
+                <img src="images/trad/sketches/IMG_8777.png">
+                </div>
+            </div>
+          </div>
+      
+          <div id="Trad2" class="tab-content">
+            <p>Some oil paintings vs their concept.</p>
+            <div class="row">
+                <div class="column">
+                <img src="images/352/books.png">
+                <img src="images/352/paper.png">
+                <img src="images/352/hands.png">
+                </div>
+                <div class="column">
+                <img src="images/352/books concept 1.png">
+                <img src="images/352/paper concept 2.png">
+                <img src="images/352/hands concept.png">
+                </div>
+            </div>
+          </div>
+      
+          <!-- <div id="Trad3" class="tab-content">
+            <p>Some ink drawings.</p>
+            <div class="row">
+              <div class="column"><img src="images/trad/still1.png"></div>
+              <div class="column"><img src="images/trad/still2.png"></div>
+            </div>
+          </div> -->
         </div>
-
-        <div id="Project1" class="tab-content">
-            <h3>Sketches</h3>
-            <p>See the code behind the game here.</p>
-        </div>
-
-        <div id="Project2" class="tab-content">
-            <h3>Paintings</h3>
-            <p>Details of Project 2...</p>
-        </div>
-
-        <div id="Project3" class="tab-content">
-            <h3>Ink</h3>
-            <p>Details of Project 3...</p>
-        </div> -->
-    </div>
-    </section>
+      </section>
+      
 
     <script>
         function openProject(evt, projectName) {
@@ -281,8 +326,30 @@
             evt.currentTarget.className += " active";
         }
 
+        function openTab(evt, tabId, btn) {
+            const container = btn.closest('.section-content');
+
+            // Hide all tab content in this section
+            const tabContents = container.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.style.display = "none");
+
+            // Remove 'active' from all buttons in this section
+            const tabButtons = container.querySelectorAll('.tablinks');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Show selected tab and mark the button active
+            document.getElementById(tabId).style.display = "block";
+            btn.classList.add('active');
+        }
+
         function openDefaultProject() {
             document.querySelector(".tablinks").click();
+
+            // const traditionalSection = document.querySelector(".s2 .section-content");
+            // const defaultTradTabBtn = traditionalSection.querySelector(".tablinks");
+            // if (defaultTradTabBtn) {
+            //     defaultTradTabBtn.click();
+            // }
         }
 
         function toggleSection(button) {
