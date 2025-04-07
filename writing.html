@@ -44,7 +44,11 @@
 
     <!-- Tabbed Projects Section -->
     <div class="s2">
-        <h2 class = "title">Short Stories</h2>
+        <h2 class = "title">Short Stories
+            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+        </h2>
+        <div class="section-content">
+
         <div class="tabs">
             <button class="tablinks" onclick="openProject(event, 'Project1')">Amma's House</button>
             <button class="tablinks" onclick="openProject(event, 'Project2')">Anna</button>
@@ -52,49 +56,95 @@
         </div>
 
         <div id="Project1" class="tab-content">
-            <div class="pdf-container">
-                <embed src="PDFs/Amma's House.pdf" type="application/pdf" width="100%" height="600px" />
-            </div>
+            <div class="pdf-container" data-src="PDFs/Amma's House.pdf"></div>
         </div>
-
+        
         <div id="Project2" class="tab-content">
-            <div class="pdf-container">
-                <embed src="PDFs/Anna  copy.pdf" type="application/pdf" width="100%" height="600px" />
-            </div>
+            <div class="pdf-container" data-src="PDFs/Anna  copy.pdf"></div>
         </div>
+        
 
         <div id="Project3" class="tab-content">
             <h3>Random</h3>
             <p>Details of Project 3...</p>
         </div>
+        </div>
     </div>
 
     <div class="s3">
-        <h2 class = "title">Poems</h2>
+        <h2 class = "title">Poems
+            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+        </h2>
+        <div class="section-content">
+
+        </div>
     </div>
 
     <script>
         function openProject(evt, projectName) {
             var i, tabcontent, tablinks;
-
+    
+            // Hide all tabs
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-
+    
+            // Remove active class from all buttons
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-
-            document.getElementById(projectName).style.display = "block";
+    
+            // Show the selected tab
+            const tab = document.getElementById(projectName);
+            tab.style.display = "block";
             evt.currentTarget.className += " active";
+    
+            // Dynamically insert the iframe
+            const pdfContainer = tab.querySelector('.pdf-container');
+            if (pdfContainer && pdfContainer.dataset.src) {
+                pdfContainer.innerHTML = `
+                    <iframe src="${pdfContainer.dataset.src}" width="100%" height="600px" style="border:none;"></iframe>
+                `;
+            }
         }
-
+    
         function openDefaultProject() {
             document.querySelector(".tablinks").click();
         }
+
+        function toggleSection(button) {
+            const content = button.parentElement.nextElementSibling;
+            content.classList.toggle("collapsed");
+            button.classList.toggle("rotated");
+            button.innerHTML = content.classList.contains("collapsed") ? "&#9654;" : "&#9660;";
+        }
     </script>
+<!-- 
+<script>
+    function openProject(evt, projectName) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(projectName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function openDefaultProject() {
+        document.querySelector(".tablinks").click();
+    }
+</script> -->
+    
 
 </body>
 </html>

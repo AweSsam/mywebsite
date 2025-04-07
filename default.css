@@ -10,26 +10,6 @@ li, a, table, p { /* Secondary letterings are all off-white */
     text-decoration: none;
 }
 
-#thesix {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#thesix th {
-    border: 1px solid #c7c7c7;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding: 8px;
-    text-align: left;
-    background-color: #0088a9;
-    color:  #ffffff;
-}
-  
-#thesix td {
-    border: 1px solid #c7c7c7;
-    padding: 8px;
-}
-
 /* Base styling for the navigation bar */
 header {
     display: flex;
@@ -49,27 +29,14 @@ header {
     margin: 20px;
 }
 
+.s2 h3, .s3 h3 {
+    font-weight: 300;
+}
 
 body {
     padding: 0;
     margin: 0;
     background-color: #2f2f2f;
-}
-
-blockquote { /* Quotes */
-    font-family: Helvetica Neue, Arial, sans-serif;
-    color: #c7c7c7;
-    text-decoration: none;
-    font-style: italic;
-}
-
-figcaption {
-    font-family: Helvetica Neue, Arial, sans-serif;
-    color: #c7c7c7;
-    text-decoration: none;
-    font-style: italic;
-    font-size: small;
-    text-align: right;
 }
 
 .s1 .main {
@@ -372,3 +339,50 @@ html {
     justify-content: center; /* Centers the video horizontally */
     margin-top: 25px;
 }
+
+/* General row and column layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px; /* Remove extra space between columns */
+}
+
+.column {
+    flex: 1 1 25%; /* Flex-grow, flex-shrink, flex-basis */
+    padding: 0 4px; /* Space between columns */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.column img {
+    width: 100%; /* Ensure images scale to the column width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 8px; /* Space between images */
+}
+
+/* collapsable section */
+.section-content {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+  }
+  
+  .section-content.collapsed {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toggle-btn {
+    font-size: 2rem;
+    margin-left: 0rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #0088a9;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+  
+  .toggle-btn.rotated {
+    transform: rotate(90deg);
+  }
+  

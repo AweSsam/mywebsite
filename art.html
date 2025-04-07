@@ -5,6 +5,7 @@
     <title>Sameera's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="default.css">
+    
 </head>
 
 <body onload="openDefaultProject()">
@@ -28,12 +29,217 @@
         </nav>
     </header>
 
-    <section class = "s2">
-        <h2 class = "title">Digital Art</h2>
-    </section>
+    <!-- Tabbed Projects Section -->
+    <div class="s2">
+        <h2 class = "title">Projects
+            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+        </h2>
+        <div class="section-content collapsed">
+        <h3>Overload</h3>
+        <div class="video-container">
+            <iframe width="800" height="450" 
+                    src="https://www.youtube.com/embed/R29IWmlYHMQ?si=iJsB7aK5AeXK6hI1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <h3>Creature Animatic</h3>
+        <div class="video-container">
+            <iframe width="800" height="450" 
+                    src="https://www.youtube.com/embed/meNvojOTgS0?si=rrGmqTrVj3O05sB-" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <h3>Careful Watchers 1.0</h3>
+        <div class="tabs">
+            <button class="tablinks" onclick="openProject(event, 'Project4')">In-Game Art</button>
+            <button class="tablinks" onclick="openProject(event, 'Project5')">Unused Art Pieces</button>
+            <button class="tablinks" onclick="openProject(event, 'Project6')">Concept Sketches</button>
+        </div>
 
-    <section class = "s3">
-        <h2 class = "title">Traditional Art</h2>
+        <div id="Project4" class="tab-content">
+            <p>Some background shots from the game, and some character models. See the code behind the game here.</p>
+            <div class="row"> 
+                <div class="column">
+                    <img src="images/CW/group.png">
+                    <img src="images/CW/diner.png">
+  
+                </div>
+                <div class="column">
+                    <img src="images/CW/group color.png">
+                    <img src="images/CW/jose.png">
+                    <img src="images/CW/hoa loa ken.png">
+
+                </div> 
+                <div class="column">
+                    <img src="images/CW/bakery.png">
+                    <img src="images/CW/map 1.png">
+                    <img src="images/CW/classroom.png">
+
+                </div>
+                <div class="column">
+                    <img src="images/CW/taco truck.png">
+                    <img src="images/CW/map.png">
+                </div>
+              </div>
+                <!-- Add more art items as needed -->
+            </div>
+
+        <div id="Project5" class="tab-content">
+            <p>Some parts from the unfinished part of the game.</p>
+            <div class="row"> 
+                <div class="column">
+                    <img src="images/CW/unused/Untitled_Artwork 2.png">
+                </div>
+                <div class="column">
+                    <img src="images/CW/unused/Untitled_Artwork 3.png">
+                </div> 
+                <div class="column">
+                    <img src="images/CW/unused/Untitled_Artwork.png">
+                </div>
+                <div class="column">
+                    <img src="images/CW/unused/Untitled_Artwork 1.png">
+                </div>
+              </div>
+                <!-- Add more art items as needed -->
+            </div>
+
+        <div id="Project6" class="tab-content">
+            <p>Some sketches/demos I made.</p>
+            <div class="row"> 
+                <div class="column">
+                    <img src="images/CW/concept/group.png">
+                    <img src="images/CW/concept/kurt table.png">
+                    <img src="images/CW/concept/christie.png">
+                    <img src="images/CW/concept/christie desk.MP4">                
+                </div>
+                <div class="column">
+                    <img src="images/CW/concept/moe desk.MP4">
+                    <img src="images/CW/concept/ajay.png">
+                    <img src="images/CW/concept/ajay cry.MP4">
+                    <img src="images/CW/concept/map.png">
+                </div> 
+                <div class="column">
+                    <img src="images/CW/concept/side profile.png">
+                    <img src="images/CW/concept/kurt blink.MP4">
+                    <img src="images/CW/concept/moe.png">
+                    <img src="images/CW/concept/tear.MP4">
+                </div>
+                <div class="column">
+                    <img src="images/CW/concept/ajay back.MP4">
+                    <img src="images/CW/concept/kurt.png">
+                    <img src="images/CW/concept/ajay blink.MP4">
+                    <img src="images/CW/concept/heart pump.MP4">
+                </div>
+              </div>
+                <!-- Add more art items as needed -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section class="s3">
+        <h2 class="title">Digital Art
+            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+        </h2>
+        <div class="section-content collapsed">
+        <div class="row"> 
+            <div class="column">
+                <img src="images/Spider-Me.png">
+                <img src="images/Pip_+_Ravi_Car.png">
+                <img src="images/Soma_-_Lily_(Final).png">
+                <img src="images/eyes.png">
+                <img src="images/cocoon.png">
+                <img src="images/Shotput.png">
+                <img src="images/desi line.png">
+                <img src="images/desi girl.png">
+                <img src="images/hands.png">
+              <img src="images/Flower_Boy.png">
+              <img src="images/Guy_Square.png">
+              <img src="images/Xiao.png">
+              <img src="images/Sketch_Turned.png">
+              <img src="images/Barbara_&_Venti.png">
+              <img src="images/More_Male_Amber.png">
+              <img src="images/TP_Link.png">
+              <img src="images/Oikawa_.png"> <!--outlier-->
+            </div>
+            <div class="column">
+                <img src="images/Spider-Me copy.png">
+                <img src="images/Pip_+_Ravi_Eyes.png">
+                <img src="images/Kaneki.png">
+                <img src="images/ajay.png">
+                <img src="images/Careful!_Watchers 1.png">
+                <img src="images/purple elias.png">
+                <img src="images/Surya.png">
+                <img src="images/Unc.png">
+                <img src="images/Damian.png">
+              <img src="images/That_Pinterest_Guy.png">
+              <img src="images/Potential_Vampires 1.png">
+              <img src="images/402_Roomies.png">
+              <img src="images/He_Be_Grainy.png">
+              <img src="images/Diluc.png">
+              <img src="images/Chongyun_.png">
+              <img src="images/Zhongli_.png">
+            </div> 
+            <div class="column">
+                <img src="images/Pink_Eyes.png">
+                <img src="images/Pip_+_Ravi.png">
+                <img src="images/soma.png">
+                <img src="images/Elias 2.png">
+                <img src="images/silas and simon.png">
+                <img src="images/field elias.png">
+                <img src="images/Box-2-6pirates.png">
+                <img src="images/1989.png">
+                <img src="images/Stranger Things.png">
+                <img src="images/wires.png">
+                <img src="images/Cali_Beach.png">
+                <img src="images/Potential_Vampires.png">
+                <img src="images/Childe.png">
+                <img src="images/Older_Venti.png">
+                <img src="images/Denki.png">
+                <img src="images/DTIYS.png">
+                <img src="images/Xiao_.png">
+            </div>
+            <div class="column">
+                <img src="images/Pip_+_Ravi_Hotel.png">
+                <img src="images/CW_-_Moe_&_Christie.png">
+                <img src="images/otgw.png">
+                <img src="images/esha.png">
+                <img src="images/soma.png">
+                <img src="images/ballad.png">
+                <img src="images/pink boy.png">
+                <img src="images/perspective.png">
+              <img src="images/yellow_percy.png">
+              <img src="images/Banner.png">
+              <img src="images/Ancient.png">
+              <img src="images/random guy.png">
+              <img src="images/Wow_Now_It's_Actually_Sage.png">
+              <img src="images/Childe 1.png">
+              <img src="images/Male_Amber.png">
+              <img src="images/Pink_Girl.png">
+            </div>
+          </div>
+            <!-- Add more art items as needed -->
+        </div>
+    </div>
+    </section>
+    
+
+    <section class = "s2">
+        <h2 class = "title">Traditional Art
+            <button class="toggle-btn" onclick="toggleSection(this)">&#9660;</button>
+        </h2>
+        <div class="section-content collapsed">
+
         <!-- <div class="tabs"></div>
             <button class="tablinks" onclick="openProject(event, 'Project1')">Sketches</button>
             <button class="tablinks" onclick="openProject(event, 'Project2')">Paintings</button>
@@ -54,34 +260,8 @@
             <h3>Ink</h3>
             <p>Details of Project 3...</p>
         </div> -->
-    </section>
-
-    <!-- Tabbed Projects Section -->
-    <div class="s2">
-        <h2 class = "title">Projects</h2>
-        <h3>Creature Animatic</h3>
-        <h3>Careful Watchers 1.0</h3>
-        <div class="tabs">
-            <button class="tablinks" onclick="openProject(event, 'Project4')">In-Game Art</button>
-            <button class="tablinks" onclick="openProject(event, 'Project5')">Unused Art Pieces</button>
-            <button class="tablinks" onclick="openProject(event, 'Project6')">Concept Sketches</button>
-        </div>
-
-        <div id="Project4" class="tab-content">
-            <h3>In-Game Art</h3>
-            <p>See the code behind the game here.</p>
-        </div>
-
-        <div id="Project5" class="tab-content">
-            <h3>Unused Art Pieces</h3>
-            <p>Details of Project 2...</p>
-        </div>
-
-        <div id="Project6" class="tab-content">
-            <h3>Concept Sketches</h3>
-            <p>Details of Project 3...</p>
-        </div>
     </div>
+    </section>
 
     <script>
         function openProject(evt, projectName) {
@@ -104,7 +284,14 @@
         function openDefaultProject() {
             document.querySelector(".tablinks").click();
         }
-    </script>
 
+        function toggleSection(button) {
+            const content = button.parentElement.nextElementSibling;
+            content.classList.toggle("collapsed");
+            button.classList.toggle("rotated");
+            button.innerHTML = content.classList.contains("collapsed") ? "&#9660;" : "&#9654;";
+        }
+    </script>
+  
 </body>
 </html>
